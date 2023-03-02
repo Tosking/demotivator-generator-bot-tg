@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qvUENqWUXnHJd5irnMyipl7htSISm/s6w3LGJUFQ5uKdREE+9p9yirsQZ6YKTwdSrXMsV/6SWE7PJX0qiLOiMw==",
+  "dgSpecHash": "g5HLyRRek1tda/c/duFUraSL3FnKEWfgGnNHU5wtQxmDmM4i/T1ceSJbHMzAURVgs+JJdtUst/ZHCDoIYdnK7w==",
   "success": true,
-  "projectFilePath": "/home/taskavan/.RiderProjects/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+  "projectFilePath": "/home/taskavan/Документы/c#/demotivator-generator-bot-tg/ConsoleApp1/ConsoleApp1.csproj",
   "expectedPackageFiles": [
     "/home/taskavan/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "/home/taskavan/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
@@ -11,7 +11,8 @@
     "/home/taskavan/.nuget/packages/sixlabors.imagesharp.drawing/1.0.0-beta15/sixlabors.imagesharp.drawing.1.0.0-beta15.nupkg.sha512",
     "/home/taskavan/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "/home/taskavan/.nuget/packages/system.text.encoding.codepages/5.0.0/system.text.encoding.codepages.5.0.0.nupkg.sha512",
-    "/home/taskavan/.nuget/packages/telegram.bot/19.0.0-preview.2/telegram.bot.19.0.0-preview.2.nupkg.sha512"
+    "/home/taskavan/.nuget/packages/telegram.bot/19.0.0-preview.2/telegram.bot.19.0.0-preview.2.nupkg.sha512",
+    "/home/taskavan/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

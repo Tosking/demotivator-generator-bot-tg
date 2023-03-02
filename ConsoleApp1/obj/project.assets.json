@@ -337,11 +337,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/taskavan/.RiderProjects/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+      "projectUniqueName": "/home/taskavan/Документы/c#/demotivator-generator-bot-tg/ConsoleApp1/ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "/home/taskavan/.RiderProjects/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+      "projectPath": "/home/taskavan/Документы/c#/demotivator-generator-bot-tg/ConsoleApp1/ConsoleApp1.csproj",
       "packagesPath": "/home/taskavan/.nuget/packages/",
-      "outputPath": "/home/taskavan/.RiderProjects/ConsoleApp1/ConsoleApp1/obj/",
+      "outputPath": "/home/taskavan/Документы/c#/demotivator-generator-bot-tg/ConsoleApp1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/taskavan/.nuget/NuGet/NuGet.Config"
@@ -392,12 +392,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.2, 7.0.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
