@@ -101,6 +101,7 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             cancellationToken: cancellationToken);
         mes.Close();
         System.IO.File.Delete(photo);
+        System.IO.File.Delete(image);
     }
 
 }
