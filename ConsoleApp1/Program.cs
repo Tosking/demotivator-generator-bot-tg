@@ -40,9 +40,30 @@ cts.Cancel();
 void demotivate_Text(string text, string save)
 {
     Image photo = Image.Load(save);
-    var size = 50;
+    int size;
+    float padding;
+    if (text.Length < 25)
+    {
+        size = 50;
+        padding = (float)(size / 3.8 * text.Length);
+    }
+    else
+    {
+        size = 30;
+        padding = (float)(size / 7.9 * text.Length);
+        var sub = text.Split().ToList();
+        if (sub.Count == 1)
+        {
+            sub[0] = text.Substring(0, (int)text.Length / 2);
+            sub.Add(text.Substring((int)text.Length/2));
+        }
+        sub[(int)sub.Count / 2 - 1] += "\n";
+        text = String.Join(" ", sub.Select(x => x.ToString()).ToArray());
+    }
+    System.Console.WriteLine(text);
+
     Font font = SystemFonts.CreateFont("Arial", size, FontStyle.Regular);
-    photo.Mutate(x => x.DrawText(text, font, SixLabors.ImageSharp.Color.White, new PointF((float) photo.Width / 2 - (size / 4 * text.Length) - size / 2, photo.Height / 2 + 100 )));
+    photo.Mutate(x => x.DrawText(text, font, SixLabors.ImageSharp.Color.White, new PointF((float) (photo.Width / 2 - padding), photo.Height / 2 + 130 )));
     photo.Save(save);
     //using Stream stream = System.IO.File.OpenRead("./photo.jpg");
     //return stream;
@@ -53,8 +74,17 @@ void demotivate_Photo(string photoName, string save)
 {
     Image<Rgba64> photo = new(640, 480); 
     Image image = Image.Load(photoName);
-    image.Mutate(x => x.Resize(300, 200));
-    photo.Mutate(x => x.DrawImage(image, new Point(photo.Width / 2 - 150, photo.Height/ 2 - 150), 1));
+    image.Mutate(x => x.Resize(400, 300));
+    
+    var y_pos = photo.Height / 2 - 200;
+    var x_pos = photo.Width / 2 - 200;
+    Rectangle rect_w = new Rectangle(x_pos - 8, y_pos - 8, 416, 316);
+    Rectangle rect_b = new Rectangle(x_pos - 5, y_pos - 5, 410, 310);
+    photo.Mutate(x => x.Fill(SixLabors.ImageSharp.Color.White, rect_w));
+    photo.Mutate(x => x.Fill(SixLabors.ImageSharp.Color.Black, rect_b));
+    
+    photo.Mutate(x => x.DrawImage(image, new Point(x_pos, y_pos), 1));
+
     photo.Save(save);
 }
 
@@ -92,7 +122,7 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             return;
         }
 
-        System.Console.WriteLine("123321");
+        
         demotivate_Text(update.Message.Text, photo);
         var mes = System.IO.File.OpenRead(photo);
         Message sendMessage = await botClient.SendPhotoAsync(
